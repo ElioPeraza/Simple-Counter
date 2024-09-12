@@ -23,7 +23,12 @@ const SecondsCounter = () => {
   return (
 
     <div>
-      <h1>{SecondsCounter}</h1>
+
+
+      <h1><i class="fa-solid fa-clock" >{String(SecondsCounter).padStart(6, '0')}</i></h1>
+      
+
+      
     </div>
   );
 };
