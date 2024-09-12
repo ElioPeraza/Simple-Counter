@@ -20,16 +20,15 @@ const SecondsCounter = () => {
 
 
 
+  const dividir= String(SecondsCounter).padStart(6, '0'); // Aseguramos que el contador tenga 6 dígitos
+
   return (
-
-    <div>
-
-
-      <h1><i class="fa-solid fa-clock" >{String(SecondsCounter).padStart(6, '0')}</i></h1>
-      
-
-      
-    </div>
+    <h1>
+      <i className="fa-solid fa-clock"></i>
+      {dividir.split('').map((digit) => (
+        <span className="counter-digit">{digit}</span>
+      ))}
+    </h1>
   );
 };
 
