@@ -5,10 +5,9 @@ import SecondsCounter from './componentes/SecondsCounter';
 
 const App = () => {
   return (
-<>
-   <SecondsCounter/>
+
+   <SecondsCounter seconds={10} />
    
-</>
   );
 }
 

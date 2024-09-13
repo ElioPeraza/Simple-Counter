@@ -3,20 +3,20 @@ import { useState } from 'react'
 
 
 
-const SecondsCounter = () => {
+const SecondsCounter = (props) => {
   const [SecondsCounter, setSecondsCounter] = useState(0)
- 
+ console.log(props)
 
 
   useEffect(() => {
     const interval = setInterval(() => {
       setSecondsCounter ( reset =>
-        reset >= 3434 ? 0 : reset + 1
+        reset >= props.seconds ? 0 : reset + 1
       );
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [SecondsCounter, ])
+  }, [SecondsCounter])
 
 
 
