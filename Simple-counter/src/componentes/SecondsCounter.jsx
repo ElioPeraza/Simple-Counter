@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 
 const SecondsCounter = (props) => {
-  const [SecondsCounter, setSecondsCounter] = useState(0)
+  const [secondsCounter, setSecondsCounter] = useState(0)
  console.log(props)
 
 
@@ -16,12 +16,12 @@ const SecondsCounter = (props) => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [SecondsCounter])
+  }, [secondsCounter])
 
 
 
 
-  const dividir= String(SecondsCounter).padStart(6, '0'); 
+  const dividir= String(secondsCounter).padStart(6, '0'); 
 
   
   return (
